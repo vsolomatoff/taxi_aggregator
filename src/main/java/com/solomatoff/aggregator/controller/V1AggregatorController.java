@@ -52,7 +52,7 @@ public class V1AggregatorController {
         );
     }
 
-    @GetMapping("/search")
+    @PostMapping("/search")
     @Validated(Operation.OnCreate.class)
     public ResponseEntity<Collection<SearchResult>> search(
             @Valid @RequestBody Address address

@@ -76,7 +76,7 @@ class V1AggregatorControllerTest {
         String respJson = new ObjectMapper().writeValueAsString(searchResults);
         when(aggregatorService.searchByAddress(address)).thenReturn(searchResults);
 
-        mockMvc.perform(get(
+        mockMvc.perform(post(
                         "/api/v1/search")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(reqJson)
@@ -96,7 +96,7 @@ class V1AggregatorControllerTest {
         String respJson = new ObjectMapper().writeValueAsString(searchResults);
         when(aggregatorService.searchByAddress(address)).thenReturn(searchResults);
 
-        mockMvc.perform(get(
+        mockMvc.perform(post(
                         "/api/v1/search")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(reqJson)
